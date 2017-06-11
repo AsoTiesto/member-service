@@ -5,7 +5,7 @@
     <title>Register</title>
 </head>
 <body>
-<p>Register</p>
+<p>Welcome to SpringMVC!</p>
 <form:form method = "POST" action = "/process">
     <table>
         <tr>
@@ -16,9 +16,8 @@
             <td><form:label path = "password">password</form:label></td>
             <td><form:input path = "password" /></td>
         </tr>
-
         <tr>
-            <td colspan = "2">
+            <td colspan = "5">
                 <input type = "submit" value = "Register"/>
             </td>
         </tr>

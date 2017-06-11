@@ -1,7 +1,6 @@
 package controller;
 
 import domain.Member;
-import org.springframework.data.mongodb.core.MongoActionOperation;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Query;
@@ -14,15 +13,13 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.annotation.Resource;
 import java.util.List;
 
-/**
- * Created by aso on 2017/6/11.
- */
 
 @Controller
 public class MemberController {
 
     @Resource
     private MongoTemplate mongoTemplate;
+
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public ModelAndView register(){
 
@@ -34,7 +31,7 @@ public class MemberController {
         MongoOperations mongoOperations = mongoTemplate;
         mongoOperations.save(member);
 
-        model.addAttribute("message", "Hello");
+        model.addAttribute("message", "Hello!  ");
         model.addAttribute("userName", member.getUserName());
         return "home";
     }
@@ -46,10 +43,11 @@ public class MemberController {
         List<Member> memberList = mongoOperations.find(query, Member.class);
         String users = "";
         for(Member member: memberList){
-            users += member.getUserName() + "<br>";
+            users += "Username: " + member.getUserName() + "<br>" +
+                     "YourPassword: "+ member.getPassword() + "<br>";
         }
-        model.addAttribute("users", users);
-        return "userlist";
+        model.addAttribute("users", users);  // "users" 是給userlist.jsp的body讀到的
+        return "userlist";                               //  後面的users是show出使用者帳號跟密碼
     }
 
 }
