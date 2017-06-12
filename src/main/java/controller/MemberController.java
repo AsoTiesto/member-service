@@ -31,12 +31,12 @@ public class MemberController {
         MongoOperations mongoOperations = mongoTemplate;
         mongoOperations.save(member);
 
-        model.addAttribute("message", "Hello!  ");
-        model.addAttribute("userName", member.getUserName());
+        model.addAttribute("message", "Hello!  ");  //message對應到home.jsp檔的${message}
+        model.addAttribute("userName", member.getUserName());   //userName對應到${userName}得到userName
         return "home";
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/userlist", method = RequestMethod.GET)
     public String listUsers(ModelMap model){
         MongoOperations mongoOperations = mongoTemplate;
         Query query = new Query();

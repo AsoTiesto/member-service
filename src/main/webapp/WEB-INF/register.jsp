@@ -17,7 +17,7 @@
             <td><form:input path = "password" /></td>
         </tr>
         <tr>
-            <td colspan = "5">
+            <td colspan = "3">
                 <input type = "submit" value = "Register"/>
             </td>
         </tr>
