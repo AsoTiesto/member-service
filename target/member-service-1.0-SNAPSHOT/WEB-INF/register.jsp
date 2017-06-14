@@ -14,10 +14,14 @@
         </tr>
         <tr>
             <td><form:label path = "password">password</form:label></td>
-            <td><form:input path = "password" /></td>
+            <td><form:password path = "password" /></td>
         </tr>
         <tr>
-            <td colspan = "3">
+            <td><form:label path = "address">address</form:label></td>
+            <td><form:textarea path = "address" rows="5" cols="30"/></td>
+        </tr>
+        <tr>
+            <td colspan = "2">
                 <input type = "submit" value = "Register"/>
             </td>
         </tr>

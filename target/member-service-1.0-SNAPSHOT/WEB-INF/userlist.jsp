@@ -4,6 +4,7 @@
     <title>userlist</title>
 </head>
 <body>
+<p>Welcome to SpringMVC!</p>
     <p>${users}</p>
 </body>
 </html>

@@ -33,6 +33,7 @@ public class MemberController {
 
         model.addAttribute("message", "Hello!  ");  //message對應到home.jsp檔的${message}
         model.addAttribute("userName", member.getUserName());   //userName對應到${userName}得到userName
+        model.addAttribute("address", member.getAddress());
         return "home";
     }
 

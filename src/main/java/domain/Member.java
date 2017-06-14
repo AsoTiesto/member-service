@@ -11,6 +11,15 @@ public class Member {
     private String id;           //使用者Id
     private String userName;     //使用者名字
     private String password;     //使用者密碼
+    private String address;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
     public String getId() {
         return id;
