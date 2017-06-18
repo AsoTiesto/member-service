@@ -4,7 +4,7 @@
     <title>home</title>
 </head>
 <body>
-    <p>${message}  ${userName}</p>
+    <p>${message}  ${userName}  ${address}</p>
 </body>
 </html>
 <%@page isELIgnored="false" %>
