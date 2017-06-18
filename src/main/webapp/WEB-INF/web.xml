@@ -9,6 +9,7 @@
         <param-value>classpath:applicationContext.xml</param-value>
     </context-param>
 
+    <!--filter start 設定中文不會在mongodb出現亂碼-->
     <filter>
         <filter-name>encodingFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -26,6 +27,7 @@
         <filter-name>encodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+    <!--filter end-->
 
 
     <listener>

@@ -12,6 +12,15 @@ public class Member {
     private String userName;     //使用者名字
     private String password;     //使用者密碼
     private String address;
+    private boolean receivePaper;
+
+    public boolean isReceivePaper() {
+        return receivePaper;
+    }
+
+    public void setReceivePaper(boolean receivePaper) {
+        this.receivePaper = receivePaper;
+    }
 
     public String getAddress() {
         return address;

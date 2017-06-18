@@ -21,6 +21,11 @@
             <td><form:textarea path = "address" rows="5" cols="30"/></td>
         </tr>
         <tr>
+            <td><form:label path = "receivePaper">Subscribe Newsletter ?</form:label></td>
+            <td><form:checkbox path = "receivePaper" /></td>
+        </tr>
+
+        <tr>
             <td colspan = "2">
                 <input type = "submit" value = "Register"/>
             </td>
